@@ -1,5 +1,5 @@
 # Active-Directory-and-Azure-AD-Connect-Project
-Project Summary
+Project Summary:
 
 - Designed and deployed a full Active Directory (AD) environment in a simulated enterprise setting
 
@@ -38,7 +38,7 @@ Environment Setup:
 
 - Departmental OUs with users such as Emily Johnson and Michael Brown in Marketing
 
-- Sync Server (AS-SYNC) prepared for Azure AD Connect with static IP 192.168.6.11
+- Sync Server (AS-SYNC) prepared for Azure AD Connect with static IP 192.168.6.11/24
 
 - On-Premises AD Configuration
 
