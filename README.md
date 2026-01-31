@@ -8,12 +8,12 @@ Project Summary
 - Configured file servers, shared drives, and Group Policies for seamless access and security
 
 - Integrated on-premises AD with Microsoft 365 (Entra ID) using Azure AD Connect for hybrid identity
+  
 
-Project Overview
+Project Overview: This project demonstrates the design, deployment, and management of a complete Active Directory infrastructure along with synchronization to Microsoft 365 using Azure AD Connect. It covers practical IT administration skills, including domain controller setup, OU and user management, Group Policy configuration, file server setup, network drive mapping, PowerShell automation, and hybrid identity integration.
 
-This project demonstrates the design, deployment, and management of a complete Active Directory infrastructure along with synchronization to Microsoft 365 using Azure AD Connect. It covers practical IT administration skills, including domain controller setup, OU and user management, Group Policy configuration, file server setup, network drive mapping, PowerShell automation, and hybrid identity integration.
 
-Key Features
+Key Features:
 
 - Domain Controller Deployment: Installed Active Directory Domain Services and configured a new forest/domain
 
@@ -30,8 +30,9 @@ Key Features
 - Azure AD Connect Integration: Synced on-premises AD users and groups to Microsoft 365 for hybrid identity
 
 - Troubleshooting Scenarios: Identified and resolved common issues like login failures, drive mapping errors, and permission conflicts
+  
 
-Environment Setup
+Environment Setup:
 
 - On-Premises AD Server (AD01) with domain laborhub.store, static IP 192.168.6.10/24
 
@@ -66,8 +67,9 @@ Environment Setup
 - Completed initial synchronization and verified users
 
 - Users now access Microsoft 365 services (Outlook, Teams, OneDrive) with existing AD credentials
+  
 
-Project Outcomes
+Project Outcomes:
 
 - Fully functional on-premises AD with structured OUs, groups, file shares, and policies
 
@@ -78,8 +80,9 @@ Project Outcomes
 - Centralized management reduces password issues and simplifies onboarding
 
 - Seamless access for users across both on-premises and cloud environments
+  
 
-Tools and Technologies
+Tools and Technologies:
 
 - Windows Server (On-Premises Active Directory)
 
@@ -92,8 +95,9 @@ Tools and Technologies
 - Group Policy Management
 
 - RAID-5 File Server Configuration
+  
 
-Conclusion
+Conclusion:
 
 - Demonstrates enterprise-ready Active Directory deployment integrated with Microsoft 365
 
@@ -101,7 +105,7 @@ Conclusion
 
 - Validates practical IT administration skills and provides a strong foundation for real-world enterprise IT environments
 
-This project demonstrates real-world IT administration and support skills, including Active Directory management, secure file sharing, network configuration, and automation. It can serve as a foundation for enterprise system and network administration and is ideal for anyone looking to showcase hands-on experience with Windows Server environments.
+This project demonstrates real-world IT administration skills, including Active Directory management, secure file sharing, network configuration, and automation. It can serve as a foundation for enterprise system and network administration and is ideal for anyone looking to showcase hands-on experience with Windows Server environments.
 
 This project successfully synchronized the on-premises Active Directory (AD) with Microsoft 365 Entra ID using Azure AD Connect. The entire process involved preparing the AD environment, configuring the synchronization server, installing Azure AD Connect, and verifying cloud identities to ensure that all users can now sign in to Microsoft 365 using their AD credentials.
 
