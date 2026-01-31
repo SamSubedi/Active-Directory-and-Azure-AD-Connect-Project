@@ -95,6 +95,39 @@ Tools and Technologies:
 - Group Policy Management
 
 - RAID-5 File Server Configuration
+
+
+Troubleshooting Active Directory and Azure AD Connect Issues: During the synchronization of on-premises Active Directory (AD) with Microsoft 365 using Azure AD Connect, several issues can occur that may prevent users and groups from syncing correctly. Troubleshooting these issues requires understanding both the on-premises AD environment and the cloud configuration. Common issues include sync failures, authentication problems, password sync errors, and conflicts with user attributes. The following points summarize the most frequent problems and their resolutions:
+
+- Sync Not Running: The Azure AD synchronization cycle may not start automatically. Resolve this by running StartADSyncCycle -PolicyType Delta in PowerShell on the sync server to manually trigger synchronization.
+
+- Global Admin Login Fails: Signing in with a Microsoft 365 global admin account may fail, preventing sync configuration. Resolve this by verifying the global admin role in Microsoft 365 Admin Center → Users → Active Users → Roles.
+
+- Domain Admin Credentials Fail: Azure AD Connect may not access on-premises AD if domain admin credentials are invalid. Resolve this by checking and updating credentials in Server Manager → Local Server → Domain.
+
+- Last Sync Over 24 Hours: If the last sync has not occurred for over a day, the sync may be stalled. Resolve this by restarting the Azure AD Connect sync service in Services.msc → AD Connect Health Sync Monitor → Restart.
+
+- Password Not Syncing: On-premises password changes may not reflect in Microsoft 365. Resolve this by enabling Password Sync in Azure AD Connect → Configure → Sync Options → Password Sync.
+
+- Cannot Download Installer (IE Security): Internet Explorer Enhanced Security Configuration may block downloads required during setup. Resolve this by disabling IE ESC in Server Manager → Local Server → IE Enhanced Security Configuration → Off for Administrators and Users.
+
+- Duplicate UPN / Attribute Error: Conflicting User Principal Names (UPN) or other AD attributes may prevent synchronization. Resolve this by editing the user’s UPN in Active Directory Users and Computers (ADUC) → User Properties → Account → UPN.
+
+- Version Out of Date: Using an outdated Azure AD Connect version may cause sync failures. Resolve this by downloading the latest Azure AD Connect version from Entra Admin → Identity → Hybrid Identity Management → Connect.
+
+Common Resolution:
+
+- Regularly monitor synchronization health to identify and fix issues quickly.
+
+- Manage credentials carefully for both on-premises AD and Microsoft 365.
+
+- Adjust server security settings to avoid installation or connectivity problems.
+
+- Keep Azure AD Connect updated to ensure smooth synchronization.
+
+- Identify and resolve attribute conflicts like duplicate UPNs.
+
+- Understanding hybrid identity ensures seamless access for users across on-premises and cloud services.
   
 
 Conclusion:
@@ -110,4 +143,6 @@ This project demonstrates real-world IT administration skills, including Active 
 This project successfully synchronized the on-premises Active Directory (AD) with Microsoft 365 Entra ID using Azure AD Connect. The entire process involved preparing the AD environment, configuring the synchronization server, installing Azure AD Connect, and verifying cloud identities to ensure that all users can now sign in to Microsoft 365 using their AD credentials.
 
 This integration improves identity management, reduces password-related issues, and provides seamless experience across cloud services such as Outlook, SharePoint, Teams, and OneDrive. By enabling hybrid identity, the organization can now benefit from centralized user management, stronger security, and streamlined onboarding for future cloud services.
+
+The project also emphasizes troubleshooting and problem-solving in a hybrid AD environment. Common issues such as sync failures, authentication errors, password synchronization problems, and attribute conflicts were identified and resolved using practical techniques. This reinforces the importance of monitoring, maintaining, and securing enterprise systems to ensure consistent user access, operational stability, and overall reliability in a real-world IT environment.
 
