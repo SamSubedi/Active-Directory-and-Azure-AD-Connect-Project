@@ -7,7 +7,8 @@ Project Summary:
 
 - Configured file servers, shared drives, and Group Policies for seamless access and security
 
-- Integrated on-premises AD with Microsoft 365 (Entra ID) using Azure AD Connect for hybrid identity
+- Integrated on-premises AD with Microsoft 365 (Entra ID) using Azure AD Connect for hybrid identity management
+- Implement self-service password reset (SSPR) with password writeback and password hash synchronization to keep on-premises Active Directory and Entra ID passwords in sync, allowing the same password to be used in both environments.
   
 
 Project Overview: This project demonstrates the design, deployment, and management of a complete Active Directory infrastructure along with synchronization to Microsoft 365 using Azure AD Connect. It covers practical IT administration skills, including domain controller setup, OU and user management, Group Policy configuration, file server setup, network drive mapping, PowerShell automation, and hybrid identity integration.
@@ -146,3 +147,4 @@ This integration improves identity management, reduces password-related issues, 
 
 The project also emphasizes troubleshooting and problem-solving in a hybrid AD environment. Common issues such as sync failures, authentication errors, password synchronization problems, and attribute conflicts were identified and resolved using practical techniques. This reinforces the importance of monitoring, maintaining, and securing enterprise systems to ensure consistent user access, operational stability, and overall reliability in a real-world IT environment.
 
+This project allows syncing on-premises Active Directory with Entra ID using AD Connect to enable self-service password reset (SSPR). It covers password writeback, which ensures that passwords reset via SSPR in Azure AD are updated on-premises, and password hash synchronization, which keeps on-premises and cloud passwords in sync for seamless authentication across both environments. Together, these configurations enable secure and complete hybrid identity management.
